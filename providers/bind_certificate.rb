@@ -59,7 +59,7 @@ def verifyCertificateIsBindable(certificateInfo)
   currentHash = getCurrentCertificateHash(certificateInfo)
   currentAppGuid = getCurrentApplicationGuid(certificateInfo)
   currentIpAddress = getCurrentIpAddress = getCurrentIpAddress(certificateInfo)
-  if(currentHash != @new_resource.hash ||
+  if(currentHash != @new_resource.certhash ||
       currentAppGuid != @new_resource.app_guid ||
       currentIpAddress != @new_resource.ip_address)
     raise "There is already a certificate bound to port #{@new_resource.port}. Conflicting certificate info:\n" + certificateInfo
