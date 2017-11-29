@@ -3,7 +3,7 @@
 include Chef::Mixin::ShellOut
 
 action :bind do
-	hash = @new_resource.hash
+	hash = @new_resource.certhash
 	ip_address = @new_resource.ip_address
 	port = @new_resource.port
 	app_guid = @new_resource.app_guid
